@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="./static/main.js" defer></script>
+    <title>Library</title>
+</head>
+
+<body class="container justify-content-center align-items-center bg-info">
+
+    <!-- Form To Create Library -->
+    <div class="row my-5 mx-2">
+        <h3 class="text-center">Contribute to our Library!</h3>
+        <form class="row g-3 p-4 border rounded shadow bg-light" onsubmit="handleGetData(event)">
+            <div class="col-md-12">
+                <label for="formtitle" class="form-label">Title</label>
+                <input type="text" name='title' class="form-control" id="formtitle" autocomplete="true">
+            </div>
+            <div class="col-md-12">
+                <label for="formauthor" class="form-label">Author</label>
+                <input type="text" name='author' class="form-control" id="formauthor" autocomplete="true">
+            </div>
+            <div class="col-md-12">
+                <label for="formpages" class="form-label">Pages</label>
+                <input type="text" name='pages' class="form-control" id="formpages" autocomplete="true">
+            </div>
+            <div class="col-6">
+                <button type="submit" class="btn btn-info" id="add">Add</button>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="row my-5 mx-2">
+        <h3 class="text-center">Search our Library</h3>
+        <form class="row g-3 p-4 border rounded shadow bg-light" onsubmit="handleGetBook(event)">
+            <div class="col-md-12">
+                <label for="formtitle" class="form-label">Title</label>
+                <input type="text" name='title' class="form-control" id="formtitle" autocomplete="true">
+            </div>
+            <div class="col-md-12">
+                <label for="formauthor" class="form-label">Author</label>
+                <input type="text" name='author' class="form-control" id="formauthor" autocomplete="true">
+            </div>
+            <div class="col-6">
+                <button type="submit" class="btn btn-info" id="search">Search</button>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="row my-5 mx-2">
+        <h3 class="text-center">Filter Books Over 100 Pages</h3>
+        <form class="row g-3 p-4 border rounded shadow bg-light" onsubmit="pageGet()">
+            <div class="col-6">
+                <button type="submit" class="btn btn-info" id="search">Filter</button>
+            </div>
+
+        </form>
+    </div>
+
+
+
+    <!-- Place to Display Books in the library -->
+    <div class="row g-3 book-display">
+        <!-- Cards go here! -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
